@@ -16,10 +16,5 @@ public class CategoryEntityConfiguration : IEntityTypeConfiguration<Category>
             
         builder.Property(c => c.Description)
             .HasMaxLength(500);
-            
-        builder.HasOne(c => c.ParentCategory)
-            .WithMany(c => c.SubCategories)
-            .OnDelete(DeleteBehavior.Restrict)
-            .IsRequired(false);
     }
 }
