@@ -12,8 +12,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace Catalog.Database.Migrations
 {
     [DbContext(typeof(CatalogContext))]
-    [Migration("20250123152138_Optional")]
-    partial class Optional
+    [Migration("20250202145302_Initial")]
+    partial class Initial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -41,12 +41,7 @@ namespace Catalog.Database.Migrations
                         .HasMaxLength(100)
                         .HasColumnType("character varying(100)");
 
-                    b.Property<Guid?>("ParentCategoryId")
-                        .HasColumnType("uuid");
-
                     b.HasKey("Id");
-
-                    b.HasIndex("ParentCategoryId");
 
                     b.ToTable("Categories");
                 });
@@ -91,16 +86,6 @@ namespace Catalog.Database.Migrations
                     b.ToTable("Products");
                 });
 
-            modelBuilder.Entity("Catalog.Entities.Category", b =>
-                {
-                    b.HasOne("Catalog.Entities.Category", "ParentCategory")
-                        .WithMany("SubCategories")
-                        .HasForeignKey("ParentCategoryId")
-                        .OnDelete(DeleteBehavior.Restrict);
-
-                    b.Navigation("ParentCategory");
-                });
-
             modelBuilder.Entity("Catalog.Entities.Product", b =>
                 {
                     b.HasOne("Catalog.Entities.Category", "Category")
@@ -115,8 +100,6 @@ namespace Catalog.Database.Migrations
             modelBuilder.Entity("Catalog.Entities.Category", b =>
                 {
                     b.Navigation("Products");
-
-                    b.Navigation("SubCategories");
                 });
 #pragma warning restore 612, 618
         }

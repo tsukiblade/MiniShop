@@ -16,6 +16,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Order.IntegrationEvents", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Notification", "Notification\Notification.csproj", "{E3AB7F00-E007-4FDF-A75D-3018177BD3F6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiGateway", "ApiGateway\ApiGateway.csproj", "{A2FF41EA-A6FD-414F-8C3F-68AA58432A52}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -42,5 +44,9 @@ Global
 		{E3AB7F00-E007-4FDF-A75D-3018177BD3F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E3AB7F00-E007-4FDF-A75D-3018177BD3F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E3AB7F00-E007-4FDF-A75D-3018177BD3F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2FF41EA-A6FD-414F-8C3F-68AA58432A52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2FF41EA-A6FD-414F-8C3F-68AA58432A52}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2FF41EA-A6FD-414F-8C3F-68AA58432A52}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2FF41EA-A6FD-414F-8C3F-68AA58432A52}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
