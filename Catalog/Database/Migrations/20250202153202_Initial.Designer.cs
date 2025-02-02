@@ -12,7 +12,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace Catalog.Database.Migrations
 {
     [DbContext(typeof(CatalogContext))]
-    [Migration("20250202145302_Initial")]
+    [Migration("20250202153202_Initial")]
     partial class Initial
     {
         /// <inheritdoc />
@@ -59,9 +59,6 @@ namespace Catalog.Database.Migrations
                         .IsRequired()
                         .HasMaxLength(2000)
                         .HasColumnType("character varying(2000)");
-
-                    b.Property<Guid>("InventoryId")
-                        .HasColumnType("uuid");
 
                     b.Property<bool>("IsActive")
                         .HasColumnType("boolean");

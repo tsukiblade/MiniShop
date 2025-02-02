@@ -29,7 +29,6 @@ namespace Catalog.Database.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uuid", nullable: false),
-                    InventoryId = table.Column<Guid>(type: "uuid", nullable: false),
                     Name = table.Column<string>(type: "character varying(200)", maxLength: 200, nullable: false),
                     Description = table.Column<string>(type: "character varying(2000)", maxLength: 2000, nullable: false),
                     Price = table.Column<decimal>(type: "numeric(18,2)", precision: 18, scale: 2, nullable: false),
