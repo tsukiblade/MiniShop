@@ -94,3 +94,18 @@
     depends_on:
       minishop.database:
         condition: service_healthy
+
+  web:
+    image: minishop.web
+    container_name: minishop.web
+    build:
+      context: ./Frontend
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    depends_on:
+      - apigateway
+      - catalog
+      - inventory
+      - order
+      - notification
